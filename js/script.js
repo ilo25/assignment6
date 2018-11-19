@@ -31,6 +31,17 @@ $(document).ready(function () {
         }
     }
 
+    var toolsArr = ['woodTools', 'dirtTools', 'rockTools'];
+
+    var navbar = $("#navbar"); // select the board
+
+    for (var i = 0; i < toolsArr.length; i++) {
+            var tool = $('<div/>');
+            pixel.addClass('tool');
+            pixel.setAttribute('id', toolsArr[i]);
+            navbar.append(pixel)
+    }
+
 
 
 
