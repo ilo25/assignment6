@@ -2,3 +2,61 @@ body{
     margin: 0;
     padding: 0;
 }
+#board {
+    height: 100vh;
+    width: 100vh;
+    font-size: 0;
+}
+
+
+.sky {
+    background-color:rgb(104, 232, 255);
+    height: 5%;
+    width: 5%;
+    display: inline-block;
+}
+
+.dirt {
+    background-image: url('../images/dirt.jpg');
+    background-size: cover;
+    height: 5%;
+    width: 5%;
+    display: inline-block;
+}
+.dirtTop {
+    background-image: url('../images/dirtTop.png');
+    background-size: cover;
+    height: 5%;
+    width: 5%;
+    display: inline-block;
+}
+
+.cloud{
+    background-color: whitesmoke;
+    height: 5%;
+    width: 5%;
+    display: inline-block;
+}
+.rock{
+    background-image: url('../images/rock.png');
+    background-size: cover;
+    height: 5%;
+    width: 5%;
+    display: inline-block;
+}
+.wood{
+    background-image: url('../images/wood.jpg');
+    background-size: cover;
+    height: 5%;
+    width: 5%;
+    display: inline-block;
+
+}
+.woodTop{
+    background-image: url('../images/woodTop.png');
+    background-size: cover;
+    height: 5%;
+    width: 5%;
+    display: inline-block;
+
+}
