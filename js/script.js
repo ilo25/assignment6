@@ -31,15 +31,15 @@ $(document).ready(function () {
         }
     }
 
-    var toolsArr = ['woodTools', 'dirtTools', 'rockTools'];
+    var toolsArr = ['rockTools','woodTools', 'dirtTools', 'select'];
 
     var navbar = $("#navbar"); // select the board
 
     for (var i = 0; i < toolsArr.length; i++) {
-            var tool = $('<div/>');
-            pixel.addClass('tool');
-            pixel.setAttribute('id', toolsArr[i]);
-            navbar.append(pixel)
+            var tool = $('<button/>');
+            tool.addClass('tool');
+            tool.attr('id', toolsArr[i]);
+            navbar.append(tool)
     }
 
 

@@ -10,6 +10,7 @@ body{
 #navbar{
     height: 100vh;
     background-color: black;
+    padding: 10%;
 }
 
 
@@ -64,3 +65,31 @@ body{
     display: inline-block;
 
 }
+/* navbar */
+button{
+    height: 50px;
+    width: 50px;
+    /* background-color: red; */
+    display: block;
+    margin: 40px;
+
+}
+#rockTools{
+    background-color: grey;
+
+}
+
+#woodTools{
+    background-color: greenyellow;
+
+}
+
+#dirtTools{
+    background-color: brown;
+
+}
+#select{
+    border:1px solid white;
+    background-color: transparent;
+}
+
