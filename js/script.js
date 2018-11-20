@@ -31,8 +31,10 @@ $(document).ready(function () {
             pixel.addClass(boardArr[i][j]);
             pixel.on('click', function () {
                 valTexture = this.className.replace("Top", "");
+                var that = this
                 if (valButton == valTexture) {
                     console.log('On stock la texture ' + valButton);
+                    that.className=("sky");
                     stockSelection(valButton);
                 }
             });
