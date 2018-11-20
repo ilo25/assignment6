@@ -21,37 +21,51 @@ $(document).ready(function () {
         ['dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt'],
         ['dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt'],
     ];
+
     var board = $("#board"); // select the board
+    var valTexture = undefined; // Last texture selected
 
     for (var i = 0; i < boardArr.length; i++) {
         for (var j = 0; j < boardArr[i].length; j++) {
             var pixel = $('<div/>');
             pixel.addClass(boardArr[i][j]);
+            pixel.on('click', function () {
+                valTexture = this.className.replace("Top", "");
+                if (valButton == valTexture) {
+                    console.log('On stock la texture ' + valButton);
+                    stockSelection(valButton);
+                }
+            });
             board.append(pixel)
+
         }
     }
 
-    var toolsArr = ['rockTools','woodTools', 'dirtTools', 'select'];
-
+    var toolsArr = ['rockTools', 'woodTools', 'dirtTools', 'select'];
     var navbar = $("#navbar"); // select the board
+    var valButton = undefined; // // Last button selected
 
     for (var i = 0; i < toolsArr.length; i++) {
-            var tool = $('<button/>');
-            tool.addClass('tool');
-            tool.attr('id', toolsArr[i]);
-            tool.attr('value', toolsArr[i].replace("Tools"," "));
-            tool.on('click',toolsSelected);
-            navbar.append(tool)
-        
-    }
-
-    function toolsSelected(){
-        var valButton = this.value;
-        console.log(valButton);
-        var classSelected = 
-
+        var tool = $('<button/>');
+        tool.addClass('tool');
+        tool.attr('id', toolsArr[i]);
+        tool.attr('value', toolsArr[i].replace("Tools", ""));
+        tool.on('click', function () {
+            valButton = this.value;
+        });
+        navbar.append(tool)
 
     }
+
+    var arrSelection = [];
+    function stockSelection(selection) {
+        arrSelection.push(selection);
+        console.log(arrSelection);
+        $('#select').addClass('tool ' + arrSelection[arrSelection.length-1])
+    }
+
+
+
 
 
 
