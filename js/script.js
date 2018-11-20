@@ -61,7 +61,7 @@ $(document).ready(function () {
     function stockSelection(selection) {
         arrSelection.push(selection);
         console.log(arrSelection);
-        $('#select').addClass('tool ' + arrSelection[arrSelection.length-1])
+        $('#select').addClass('tool ' + arrSelection[arrSelection.length])
     }
 
 
