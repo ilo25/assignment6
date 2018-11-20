@@ -39,7 +39,18 @@ $(document).ready(function () {
             var tool = $('<button/>');
             tool.addClass('tool');
             tool.attr('id', toolsArr[i]);
+            tool.attr('value', toolsArr[i].replace("Tools"," "));
+            tool.on('click',toolsSelected);
             navbar.append(tool)
+        
+    }
+
+    function toolsSelected(){
+        var valButton = this.value;
+        console.log(valButton);
+        var classSelected = 
+
+
     }
 
 
