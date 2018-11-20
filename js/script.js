@@ -31,8 +31,10 @@ $(document).ready(function () {
             pixel.addClass(boardArr[i][j]);
             pixel.on('click', function () {
                 valTexture = this.className.replace("Top", "");
+                var that = this
                 if (valButton == valTexture) {
                     console.log('On stock la texture ' + valButton);
+                    that.className = ("sky");
                     stockSelection(valButton);
                 }
             });
@@ -61,9 +63,25 @@ $(document).ready(function () {
     function stockSelection(selection) {
         arrSelection.push(selection);
         console.log(arrSelection);
-        $('#select').addClass('tool ' + arrSelection[arrSelection.length])
+        $('#select').addClass('tool ' + arrSelection[arrSelection.length - 1])
     }
 
+    var canPlace = false
+    $('#select').on('click', function () {
+        canPlace = true;
+        console.log(canPlace)
+        //btnSectect.removeClass(arrSelection[arrSelection.length-1]);
+    })
+
+    // test 
+    if (canPlace) {
+        var divBoard = $('#board>div') // arr
+        for(var i = 0; i<divBoard.length; i++){
+            divBoard[i].on('click', function () {
+                console.log('Pixel canPlace')
+            });
+        }
+    }
 
 
 
