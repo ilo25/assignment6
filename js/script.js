@@ -34,7 +34,6 @@ $(document).ready(function () {
                 valTexture = this.className.replace("Top", "");
                 var that = this
                 if (valButton == valTexture) {
-                    console.log('On stock la texture ' + valButton);
                     that.className = ("sky");
                     stockSelection(valButton);
                 }
@@ -56,8 +55,6 @@ $(document).ready(function () {
         if (i != toolsArr.length) {
             tool.on('click', function () {
                 valButton = this.value;
-
-
             });
         }
 
@@ -74,12 +71,9 @@ $(document).ready(function () {
     }
 
     $('#select').on('click', function () {
-
         $('#board').on('click', boardClicked);
-
-
-
     });
+
     function deleteOn() {
         $('#board').off('click', boardClicked)
     }
@@ -87,9 +81,7 @@ $(document).ready(function () {
 
     function boardClicked(event) {
         var latsSelection = arrSelection[arrSelection.length - 1];
-        console.log(arrSelection);
         if (arrSelection.length != 0) {
-            console.log(arrSelection);
             var selectedPixel = event.target;
             selectedPixel.className = latsSelection;
             $('#select').removeClass(latsSelection)
