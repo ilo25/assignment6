@@ -2,7 +2,6 @@ body{
     margin: 0;
     padding: 0;
 }
-<<<<<<< HEAD
 /* module start  */
 .homePage{
     height: 100vh;
@@ -15,7 +14,7 @@ body{
 .containButtons{
     position: fixed;
     top: 50vh;
-    left: calc(43vw - 74px);
+    left: calc(50vw - 185px);
     
 }
 input {
@@ -38,21 +37,18 @@ input:hover{
     display:none;
 }
 
-=======
->>>>>>> 85d88273d3210edce0c1e212068da4e934b3282d
 #board {
     height: 100vh;
     width: 100vh;
     font-size: 0;
 }
-#navbar{
-    height: 100vh;
-    background-color: black;
-    padding: 10%;
-}
-.disable {
-    pointer-events: none;
-}
+
+
+
+
+
+
+
 
 #board div{
     height: 5%;
@@ -90,26 +86,35 @@ input:hover{
 
 }
 /* navbar */
-button{
+#navbar{
+    height: 100vh;
+    background-color: black;
+}
+
+#navbar button {
     height: 50px;
     width: 50px;
-    /* background-color: red; */
     display: block;
-    margin: 40px;
+    margin: 40px 40%;
 
 }
-#rockTools{
-    background-color: grey;
 
+.disable {
+    pointer-events: none;
+}
+#rockTools{
+    background-image: url('../images/rockTools.png');
+    background-size: contain;
 }
 
 #woodTools{
-    background-color: greenyellow;
-
+    background-image: url('../images/woodTool.png');
+    background-size: contain;
 }
 
 #dirtTools{
-    background-color: brown;
+    background-image: url('../images/dirtTool.png');
+    background-size: contain;
 
 }
 #select{
@@ -117,3 +122,39 @@ button{
     background-color: transparent;
 }
 
+
+
+@media (max-width: 575.98px) { 
+    
+ }
+
+@media (max-width: 767.98px) { 
+
+}
+@media (max-width: 1024px) {
+
+    #navbar {
+        height: 100%;
+        width: 100vw;
+        font-size: 0;
+        margin: 15px;
+    }
+    #navbar button {
+        display: inline-block;
+        margin: 40px;
+     }
+     #board {
+        height: 100vw;
+        width: 100vw;
+    }
+    .container {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+ }
+
+@media (max-width: 1199.98px) { 
+
+}
