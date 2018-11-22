@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+<<<<<<< HEAD
     $("#start").on('click', function(){
         $(".homePage").css("display", "none");
         $(".container").css("display", "block");
@@ -10,6 +11,8 @@ $(document).ready(function () {
         })
     })
 
+=======
+>>>>>>> 85d88273d3210edce0c1e212068da4e934b3282d
     var boardArr = [
         ['sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky'],
         ['sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky'],
@@ -44,7 +47,10 @@ $(document).ready(function () {
                 valTexture = this.className.replace("Top", "");
                 var that = this
                 if (valButton == valTexture) {
+<<<<<<< HEAD
                     console.log('On stock la texture ' + valButton);
+=======
+>>>>>>> 85d88273d3210edce0c1e212068da4e934b3282d
                     that.className = ("sky");
                     stockSelection(valButton);
                 }
@@ -66,8 +72,11 @@ $(document).ready(function () {
         if (i != toolsArr.length) {
             tool.on('click', function () {
                 valButton = this.value;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 85d88273d3210edce0c1e212068da4e934b3282d
             });
         }
 
@@ -84,12 +93,18 @@ $(document).ready(function () {
     }
 
     $('#select').on('click', function () {
+<<<<<<< HEAD
 
         $('#board').on('click', boardClicked);
 
 
 
     });
+=======
+        $('#board').on('click', boardClicked);
+    });
+
+>>>>>>> 85d88273d3210edce0c1e212068da4e934b3282d
     function deleteOn() {
         $('#board').off('click', boardClicked)
     }
@@ -97,9 +112,13 @@ $(document).ready(function () {
 
     function boardClicked(event) {
         var latsSelection = arrSelection[arrSelection.length - 1];
+<<<<<<< HEAD
         console.log(arrSelection);
         if (arrSelection.length != 0) {
             console.log(arrSelection);
+=======
+        if (arrSelection.length != 0) {
+>>>>>>> 85d88273d3210edce0c1e212068da4e934b3282d
             var selectedPixel = event.target;
             selectedPixel.className = latsSelection;
             $('#select').removeClass(latsSelection)
@@ -132,6 +151,9 @@ $(document).ready(function () {
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 85d88273d3210edce0c1e212068da4e934b3282d
 });
