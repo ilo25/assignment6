@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/* module start  */
+.homePage{
+    height: 100vh;
+    background-image:url("../images/back.jpg");
+    width:100vw;
+    display:block;
+    background-size: cover;
+    background-position: center;
+}
+.containButtons{
+    position: fixed;
+    top: 50vh;
+    left: calc(43vw - 74px);
+    
+}
+input {
+    font-size: 25px;
+    border-radius: 15px;
+    transition-duration: 0.4s;
+    background-color: rgb(3, 177, 244);
+    padding: 5px 40px;
+    margin: 10px;
+
+}
+input:hover{
+    color:white;
+}
+
+
+
+/* module start game */
+.container{
+    display:none;
+}
+
+#board {
+    height: 100vh;
+    width: 100vh;
+    font-size: 0;
+}
+#navbar{
+    height: 100vh;
+    background-color: black;
+    padding: 10%;
+}
+.disable {
+    pointer-events: none;
+}
+
+#board div{
+    height: 5%;
+    width: 5%;
+    display: inline-block;
+}
+
+.sky {
+    background-color:rgb(104, 232, 255);
+}
+.dirt {
+    background-image: url('../images/dirt.jpg');
+    background-size: cover;
+}
+.dirtTop {
+    background-image: url('../images/dirtTop.png');
+    background-size: cover;
+}
+
+.cloud{
+    background-color: whitesmoke;
+}
+.rock{
+    background-image: url('../images/rock.png');
+    background-size: cover;
+}
+.wood{
+    background-image: url('../images/wood.jpg');
+    background-size: cover;
+
+}
+.woodTop{
+    background-image: url('../images/woodTop.png');
+    background-size: cover;
+
+}
+/* navbar */
+button{
+    height: 50px;
+    width: 50px;
+    /* background-color: red; */
+    display: block;
+    margin: 40px;
+
+}
+#rockTools{
+    background-color: grey;
+
+}
+
+#woodTools{
+    background-color: greenyellow;
+
+}
+
+#dirtTools{
+    background-color: brown;
+
+}
+#select{
+    border:1px solid white;
+    background-color: transparent;
+}
+
