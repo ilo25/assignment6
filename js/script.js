@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-<<<<<<< HEAD
     $("#start").on('click', function(){
         $(".homePage").css("display", "none");
         $(".container").css("display", "block");
@@ -11,8 +10,6 @@ $(document).ready(function () {
         })
     })
 
-=======
->>>>>>> 85d88273d3210edce0c1e212068da4e934b3282d
     var boardArr = [
         ['sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky'],
         ['sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky'],
