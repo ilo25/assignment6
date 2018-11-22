@@ -12,6 +12,9 @@ body{
     background-color: black;
     padding: 10%;
 }
+.disable {
+    pointer-events: none;
+}
 
 #board div{
     height: 5%;

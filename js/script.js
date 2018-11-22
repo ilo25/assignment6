@@ -22,14 +22,14 @@ $(document).ready(function () {
         ['dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt'],
     ];
 
+    //CREATION PIXELS IN THE BOARD
     var board = $("#board"); // select the board
     var valTexture = undefined; // Last texture selected
-
     for (var i = 0; i < boardArr.length; i++) {
         for (var j = 0; j < boardArr[i].length; j++) {
             var pixel = $('<div/>');
             pixel.addClass(boardArr[i][j]);
-            pixel.on('click', function () {
+            pixel.on('click', function () { // check if the tools and the texture are matching
                 valTexture = this.className.replace("Top", "");
                 var that = this
                 if (valButton == valTexture) {
@@ -43,45 +43,49 @@ $(document).ready(function () {
         }
     }
 
-    var toolsArr = ['rockTools', 'woodTools', 'dirtTools', 'select'];
+    //CREATION TOOLS BUTTONS IN THE NAV BAR
+    var toolsArr = ['rockTools', 'woodTools', 'dirtTools', 'select']; // Array of tools !!! 'Select' have to be at the end of the array
     var navbar = $("#navbar"); // select the board
-    var valButton = undefined; // // Last button selected
-
+    var valButton = undefined; // Last button selected
     for (var i = 0; i < toolsArr.length; i++) {
         var tool = $('<button/>');
         tool.addClass('tool');
         tool.attr('id', toolsArr[i]);
         tool.attr('value', toolsArr[i].replace("Tools", ""));
-        tool.on('click', function () {
-            valButton = this.value;
-        });
-        navbar.append(tool)
-
+        if(i != toolsArr.length){
+            tool.on('click', function () {
+                valButton = this.value;
+            });
+        }
+        
+        navbar.append(tool);
     }
 
     var arrSelection = [];
-    function stockSelection(selection) {
+    $('#select').addClass('tool disable');
+
+    function stockSelection(selection) { // stock the selection 
         arrSelection.push(selection);
-        console.log(arrSelection);
         $('#select').addClass('tool ' + arrSelection[arrSelection.length - 1])
+        $('#select').removeClass('disable');
     }
 
-    var canPlace = false
     $('#select').on('click', function () {
-        canPlace = true;
-        console.log(canPlace)
-        //btnSectect.removeClass(arrSelection[arrSelection.length-1]);
-    })
+        var latsSelection = arrSelection[arrSelection.length - 1];
+        $('#board').on('click', function (event) {
+            if (arrSelection.length != 0) {
+                var selectedPixel = event.target;
+                selectedPixel.className = latsSelection;
+                $('#select').removeClass(latsSelection)
+                $('#select').addClass('tool disable');
+                arrSelection = [];
+            }
+            latsSelection = "sky";
+            $('#select').removeClass('disable');
+        });
 
-    // test 
-    if (canPlace) {
-        var divBoard = $('#board>div') // arr
-        for(var i = 0; i<divBoard.length; i++){
-            divBoard[i].on('click', function () {
-                console.log('Pixel canPlace')
-            });
-        }
-    }
+    });
+
 
 
 
