@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     var boardArr = [
         ['sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky'],
         ['sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky'],
@@ -52,12 +53,14 @@ $(document).ready(function () {
         tool.addClass('tool');
         tool.attr('id', toolsArr[i]);
         tool.attr('value', toolsArr[i].replace("Tools", ""));
-        if(i != toolsArr.length){
+        if (i != toolsArr.length) {
             tool.on('click', function () {
                 valButton = this.value;
+
+
             });
         }
-        
+
         navbar.append(tool);
     }
 
@@ -71,21 +74,32 @@ $(document).ready(function () {
     }
 
     $('#select').on('click', function () {
-        var latsSelection = arrSelection[arrSelection.length - 1];
-        $('#board').on('click', function (event) {
-            if (arrSelection.length != 0) {
-                var selectedPixel = event.target;
-                selectedPixel.className = latsSelection;
-                $('#select').removeClass(latsSelection)
-                $('#select').addClass('tool disable');
-                arrSelection = [];
-            }
-            latsSelection = "sky";
-            $('#select').removeClass('disable');
-        });
+
+        $('#board').on('click', boardClicked);
+
+
 
     });
+    function deleteOn() {
+        $('#board').off('click', boardClicked)
+    }
 
+
+    function boardClicked(event) {
+        var latsSelection = arrSelection[arrSelection.length - 1];
+        console.log(arrSelection);
+        if (arrSelection.length != 0) {
+            console.log(arrSelection);
+            var selectedPixel = event.target;
+            selectedPixel.className = latsSelection;
+            $('#select').removeClass(latsSelection)
+            $('#select').addClass('tool disable');
+            arrSelection = [];
+        }
+        latsSelection = "sky";
+        $('#select').removeClass('disable');
+        deleteOn();
+    }
 
 
 
