@@ -23,8 +23,8 @@ $(document).ready(function () {
         ['sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'woodTop', 'woodTop', 'woodTop', 'sky', 'sky'],
         ['sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'woodTop', 'woodTop', 'woodTop', 'sky', 'sky'],
         ['sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'wood', 'sky', 'sky', 'sky'],
-        ['sky', 'sky', 'sky', 'sky', 'woodTop', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'wood', 'sky', 'sky', 'sky'],
-        ['sky', 'sky', 'sky', 'woodTop', 'woodTop', 'woodTop', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'rock', 'rock', 'sky', 'wood', 'sky', 'sky', 'rock'],
+        ['sky', 'sky', 'sky', 'sky', 'woodTop', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'money', 'money', 'sky', 'wood', 'sky', 'sky', 'sky'],
+        ['sky', 'sky', 'sky', 'woodTop', 'woodTop', 'woodTop', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'money', 'rock', 'rock', 'sky', 'wood', 'sky', 'sky', 'rock'],
         ['dirtTop', 'dirtTop', 'dirtTop', 'dirtTop', 'dirtTop', 'dirtTop', 'dirtTop', 'dirtTop', 'dirtTop', 'dirtTop', 'dirtTop', 'dirtTop', 'dirtTop', 'dirtTop', 'dirtTop', 'dirtTop', 'dirtTop', 'dirtTop', 'dirtTop', 'dirtTop'],
         ['dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt'],
         ['dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt', 'dirt'],
@@ -54,7 +54,7 @@ $(document).ready(function () {
     }
 
     //CREATION TOOLS BUTTONS IN THE NAV BAR
-    var toolsArr = ['rockTools', 'woodTools', 'dirtTools', 'select']; // Array of tools !!! 'Select' have to be at the end of the array
+    var toolsArr = ['rockTools', 'woodTools', 'dirtTools', 'moneyTools', 'select']; // Array of tools !!! 'Select' have to be at the end of the array
     var navbar = $("#navbar"); // select the board
     var valButton = undefined; // Last button selected
     for (var i = 0; i < toolsArr.length; i++) {
@@ -65,8 +65,6 @@ $(document).ready(function () {
         if (i != toolsArr.length) {
             tool.on('click', function () {
                 valButton = this.value;
-
-
             });
         }
 
@@ -112,4 +110,4 @@ $(document).ready(function () {
 
 
 
-    });
+});

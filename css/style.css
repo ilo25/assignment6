@@ -30,8 +30,6 @@ input:hover{
     color:white;
 }
 
-
-
 /* module start game */
 .container{
     display:none;
@@ -41,23 +39,20 @@ input:hover{
     height: 100vh;
     width: 100vh;
     font-size: 0;
+    background-image: url('http://wvaq.com/wp-content/uploads/sites/89/sky.jpg');
+    background-size: contain;
 }
-
-
-
-
-
-
-
 
 #board div{
     height: 5%;
     width: 5%;
     display: inline-block;
+    overflow: scroll;
 }
 
 .sky {
-    background-color:rgb(104, 232, 255);
+    /* background-color:rgb(104, 232, 255); */
+    background-color: transparent;
 }
 .dirt {
     background-image: url('../images/dirt.jpg');
@@ -77,6 +72,11 @@ input:hover{
 }
 .wood{
     background-image: url('../images/wood.jpg');
+    background-size: cover;
+
+}
+.money{
+    background-image: url('../images/money.png');
     background-size: cover;
 
 }
@@ -111,6 +111,11 @@ input:hover{
     background-image: url('../images/woodTool.png');
     background-size: contain;
 }
+#moneyTools{
+    background-image: url('../images/moneyTools.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
 #dirtTools{
     background-image: url('../images/dirtTool.png');
@@ -120,16 +125,6 @@ input:hover{
 #select{
     border:1px solid white;
     background-color: transparent;
-}
-
-
-
-@media (max-width: 575.98px) { 
-    
- }
-
-@media (max-width: 767.98px) { 
-
 }
 @media (max-width: 1024px) {
 
@@ -154,7 +149,3 @@ input:hover{
     }
 
  }
-
-@media (max-width: 1199.98px) { 
-
-}
