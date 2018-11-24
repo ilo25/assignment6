@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
 }
-/* module start  */
+/*  home page  */
 .homePage{
     height: 100vh;
     background-image:url("../images/back.jpg");
@@ -29,8 +29,12 @@ body{
 .containButtons input:hover{
     color:white;
 }
+.container-fluid img{
+    width: 100%;
+    height: auto;
+}
 
-/* module start game */
+/* The game */
 .container{
     display:none;
 }

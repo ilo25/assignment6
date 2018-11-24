@@ -1,35 +1,34 @@
 $(document).ready(function () {
 
+    //SHOW THE HOME PAGE / DEMO / THEME
     $("#start").on('click', function () {
         $(".homePage").css("display", "none");
         $(".container").css("display", "block");
     })
     $("#demo").on('click', function () {
-        $('#won').modal({
+        $('#demoModal').modal({
             show: true
         })
     })
-
     $("#theme").on('click', function () {
         $('#themeModal').modal({
             show: true
         })
     })
 
-    $('#save').on('click', function(){
+    $('#save').on('click', function () {
         // size of the board
         var size = document.querySelector('#sizeWord').value;
-        if(isNaN(size)){
+        if (isNaN(size)) {
             $("#board").css('height', '100vh');
             $("#board").css('width', '100vh');
         } else {
             $("#board").css('height', size + 'vh');
             $("#board").css('width', size + 'vh');
         }
-        
         // backgroud of the board
-        if(document.getElementById("girlyBack").checked) {
-            $("#board").css('background-image',"url('https://i.pinimg.com/originals/05/d2/43/05d243e4b495d2f4399315147777a17b.jpg')");
+        if (document.getElementById("girlyBack").checked) {
+            $("#board").css('background-image', "url('https://i.pinimg.com/originals/05/d2/43/05d243e4b495d2f4399315147777a17b.jpg')");
         }
     })
 
@@ -106,18 +105,16 @@ $(document).ready(function () {
     });
 
     function deleteOn() {
-        $('#board').off('click', boardClicked)
+        $('#board').off('click', boardClicked);
     }
 
     function boardClicked(event) {
         var latsSelection = arrSelection[arrSelection.length - 1];
-        console.log(arrSelection);
         if (arrSelection.length != 0) {
-            console.log(arrSelection);
             if (arrSelection.length != 0) {
                 var selectedPixel = event.target;
                 selectedPixel.className = latsSelection;
-                $('#select').removeClass(latsSelection)
+                $('#select').removeClass(latsSelection);
                 $('#select').addClass('tool disable');
                 arrSelection = [];
             }
