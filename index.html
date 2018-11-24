@@ -12,7 +12,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js""></script>
     <!-- my JS file with ready()-->
-    <script src="./js/script.js"> </script> <!-- Font -->
+    <script src="
+        ./js/script.js"> </script> <!-- Font -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"> -->
 
     <!-- Bootstrap CSS -->
@@ -26,29 +27,60 @@
     <!-- TEST -->
     
     <div class="homePage">
-        <!-- The Modal of the winner-->
+    
+    <!-- The Modal of the Demo -->
     <div class="modal fade" id="won">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">DEMO</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>Create your own word with our amazing Minecraft</p>
-                        <img src="https://i.giphy.com/media/WtDaSUB8GDiRW/giphy.webp" alt='Create your word'>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">DEMO</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Create your own word with our amazing Minecraft</p>
+                    <img src="https://i.giphy.com/media/WtDaSUB8GDiRW/giphy.webp" alt='Create your word'>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- The Modal of the theme setting -->
+    <div class="modal fade" id="themeModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Theme setting</h4>
+                </div>
+                <div class="modal-body">
+                    <label>Please set the world width and height :</label>
+                    <input type="text" name="size" id="sizeWord" value="100">
+                    <br>
+                    <label>Please set the background of you world :</label>
+                    <input type="radio" name="background" value="default" id="defaultBack" checked> Default
+                    <input type="radio" name="background" value="girly" id="girlyBack" > Girly
+                    <br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" id="save" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
         <div class="containButtons">
             <input type="button" value="START" id="start">
             <input type="button" value="DEMO" id="demo">
+            <input type="button" value="THEME" id="theme">
         </div>
 
     </div> 
+
+
+
+
     <div class="container">
         <div class="row">
             <div class="col-md-8">
@@ -56,8 +88,6 @@
             </div>
             <div class="col-md-4" id="navbar"></div>
         </div>
-
-
     </div>
 
 

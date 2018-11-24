@@ -10,6 +10,29 @@ $(document).ready(function () {
         })
     })
 
+    $("#theme").on('click', function () {
+        $('#themeModal').modal({
+            show: true
+        })
+    })
+
+    $('#save').on('click', function(){
+        // size of the board
+        var size = document.querySelector('#sizeWord').value;
+        if(isNaN(size)){
+            $("#board").css('height', '100vh');
+            $("#board").css('width', '100vh');
+        } else {
+            $("#board").css('height', size + 'vh');
+            $("#board").css('width', size + 'vh');
+        }
+        
+        // backgroud of the board
+        if(document.getElementById("girlyBack").checked) {
+            $("#board").css('background-image',"url('https://i.pinimg.com/originals/05/d2/43/05d243e4b495d2f4399315147777a17b.jpg')");
+        }
+    })
+
     var boardArr = [
         ['sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky'],
         ['sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky'],
@@ -49,7 +72,6 @@ $(document).ready(function () {
                 }
             });
             board.append(pixel)
-
         }
     }
 
@@ -67,7 +89,6 @@ $(document).ready(function () {
                 valButton = this.value;
             });
         }
-
         navbar.append(tool);
     }
 
@@ -87,7 +108,6 @@ $(document).ready(function () {
     function deleteOn() {
         $('#board').off('click', boardClicked)
     }
-
 
     function boardClicked(event) {
         var latsSelection = arrSelection[arrSelection.length - 1];
